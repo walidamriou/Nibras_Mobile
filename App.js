@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, Image, StyleSheet, TextInput } from 'react-native';
+import data from './assets/data.js';
 
 const styles = StyleSheet.create({
   Logo: {
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
     padding: 10, 
   }
 });
-
+let var1 = data[10]['ARABIC'];
 const HelloWorldApp = () => {
   return (
     <View
@@ -29,8 +30,10 @@ const HelloWorldApp = () => {
       <Image style={styles.Logo} source={require('./img/logo.png')} />
       {" "}
         نبراس
-      </Text>
 
+        {var1}
+      </Text>
+      
       <TextInput
       style={{ height: 50,width:200, borderColor: 'gray', borderWidth: 1 }}
       //onChangeText={text => onChangeText(text)}
